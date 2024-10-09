@@ -3,84 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Utkarsh Raj - Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
             color: #333;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        header {
+            background: url('https://images.unsplash.com/photo-1516245834210-43e857f2d4a3?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
         }
-        ul li {
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .about, .projects, .skills, .contact {
+            margin-bottom: 3rem;
+        }
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .project {
+            flex: 1 1 45%;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project h3 {
+            margin: 1rem 0 0.5rem;
+        }
+        .skills ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skills ul li {
             background-color: #eee;
-            margin: 0.5rem 0;
-            padding: 0.5rem;
+            padding: 0.5rem 1rem;
             border-radius: 5px;
+            font-size: 1.1rem;
         }
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 2rem;
             background-color: #333;
             color: #fff;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
         <h1>Utkarsh Raj - Portfolio</h1>
     </header>
 
+    <!-- Main Content -->
     <div class="content">
-        <section>
+
+        <!-- About Section -->
+        <section class="about">
             <h2>About Me</h2>
-            <p>Hi, I'm Utkarsh Raj, an engineering student with a passion for technology, cricket, football, and acting. I'm also a gold medalist in the International Olympiad of Physics, Maths, and General Knowledge.</p>
+            <p>Hi, I'm Utkarsh Raj, an engineering student passionate about technology, cricket, football, and acting. As a gold medalist in the International Olympiad of Physics, Maths, and General Knowledge, I always strive for excellence.</p>
         </section>
 
-        <section>
+        <!-- Projects Section -->
+        <section class="projects">
             <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Real-time Street Traffic Car Parking Management System</strong><br>
-                    <em>Technology:</em> Python, IoT, Real-time Sensors<br>
-                    <a href="#">View on GitHub</a> <!-- Add your project link here -->
-                </li>
-                <li>
-                    <strong>Another Project Name</strong><br>
-                    <em>Technology:</em> Mention the tech used<br>
-                    <a href="#">View on GitHub</a> <!-- Add your project link here -->
-                </li>
-            </ul>
+            <div class="projects-list">
+                <!-- Project 1 -->
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNhcnxlbnwwfHx8fDE2NTUyNzI1MzA&ixlib=rb-1.2.1&q=80&w=1080" alt="Car Parking Project">
+                    <h3>Real-time Street Traffic Car Parking Management System</h3>
+                    <p>Designed to optimize parking spaces in crowded areas using IoT and real-time sensors.</p>
+                    <a href="#">View on GitHub</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1518773553398-650c184e7760?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNvZGV8ZW58MHx8fHwxNjU1MjcyNTMw&ixlib=rb-1.2.1&q=80&w=1080" alt="Another Project">
+                    <h3>Another Project</h3>
+                    <p>A brief description of another project showcasing your skills in web development or coding.</p>
+                    <a href="#">View on GitHub</a>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <!-- Skills Section -->
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
                 <li>C++</li>
@@ -91,16 +146,20 @@
             </ul>
         </section>
 
-        <section>
+        <!-- Contact Section -->
+        <section class="contact">
             <h2>Contact</h2>
             <p>Email: youremail@example.com</p>
-            <p>LinkedIn: <a href="#">Utkarsh Raj</a></p> <!-- Add your LinkedIn profile link here -->
+            <p>LinkedIn: <a href="#">Utkarsh Raj</a></p>
             <p>GitHub: <a href="#">Your GitHub Profile</a></p>
         </section>
+
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>Portfolio created by Utkarsh Raj &copy; 2024</p>
+        <p>Check out my work on <a href="#">GitHub</a></p>
     </footer>
 
 </body>
